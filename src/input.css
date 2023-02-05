@@ -8,7 +8,7 @@
     }
 
     .white-button {
-        @apply text-mid_darkblue bg-white font-bold items-center gap-2 justify-center 
+        @apply flex text-mid_darkblue bg-white font-bold items-center gap-2 justify-center 
         basis-1 p-4 px-6 min-w-max hover:bg-white outline-[#09073a]/50 hover:bg-opacity-100 
         hover:outline-white outline hover:outline-offset-4 active:outline-offset-2 active:bg-opacity-90
         transition-all md:text-base rounded-sm
