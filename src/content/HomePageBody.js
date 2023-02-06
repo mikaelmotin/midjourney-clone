@@ -1,21 +1,16 @@
 import React from 'react'
 import { UserPlusIcon, ArrowLeftOnRectangleIcon, BookOpenIcon, PhotoIcon } from '@heroicons/react/24/solid'
 import { GoogleAuthProvider, signInWithPopup } from 'firebase/auth';
-import { auth } from "../firebase"
+import { auth, db, provider } from "../firebase"
+import { useNavigate } from 'react-router-dom';
 
 function HomePageBody() {
-  function authenticate() {
-    signInWithPopup(auth, provider)
-    .then(() => {
-    // Signed in ;
-    // ...
-    })
-    .catch((error) => {
-    const errorCode = error.code;
-    const errorMessage = error.message;
-    });
+  const navigate = useNavigate();
 
-    
+  function authenticate() {
+    signInWithPopup(auth, provider).then(() => navigate("/gallery"))
+
+ 
 
   }
 
